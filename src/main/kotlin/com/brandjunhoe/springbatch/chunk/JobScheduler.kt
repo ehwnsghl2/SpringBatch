@@ -8,9 +8,11 @@ import org.springframework.batch.core.launch.JobLauncher
 import org.springframework.batch.core.repository.JobExecutionAlreadyRunningException
 import org.springframework.batch.core.repository.JobInstanceAlreadyCompleteException
 import org.springframework.batch.core.repository.JobRestartException
+import org.springframework.context.annotation.Configuration
 import java.text.SimpleDateFormat
 import java.util.*
 
+@Configuration
 class JobScheduler(
     val jobLauncher: JobLauncher,
     val job: Job
